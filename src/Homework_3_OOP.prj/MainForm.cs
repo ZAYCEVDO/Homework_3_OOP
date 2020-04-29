@@ -16,7 +16,11 @@ namespace WindowsFormsApp1
 		{
 			InitializeComponent();
 
-			ProjectSettings prjSet;
+			ProjectSettings prjSettings;
+
+			///<summary>
+			///Создание playerControl, logControl, settingsControl
+			///</summary>
 
 			var playerControl = new PlayerControl();
 			_pnlPlayer.Controls.Add(playerControl);
@@ -30,6 +34,7 @@ namespace WindowsFormsApp1
 			_pnlSettings.Controls.Add(settingsControl);
 			settingsControl.Dock = DockStyle.Fill;
 		}
+
 
 	}
 }

@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
 		static void Main()
 		{
 
+			///<summary>
+			///Регистрация формы и класса ProjectSettings в Autofac
+			///</summary>
+
 			var containerBuilder = new ContainerBuilder();
 
 			containerBuilder
