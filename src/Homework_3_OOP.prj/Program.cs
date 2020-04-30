@@ -15,23 +15,7 @@ namespace WindowsFormsApp1
 		[STAThread]
 		static void Main()
 		{
-
-			///<summary>
-			///Регистрация формы и класса ProjectSettings в Autofac
-			///</summary>
-
-			var containerBuilder = new ContainerBuilder();
-
-			containerBuilder
-				.RegisterType<ProjectSettings>()
-				.AsSelf()
-				.SingleInstance();
-			containerBuilder
-				.RegisterType<MainForm>()
-			    .AsSelf()
-				.SingleInstance();
-
-			using(var container = containerBuilder.Build())
+			using(var container = RegisterServices.Create())
 			{
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);

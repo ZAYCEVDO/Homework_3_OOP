@@ -12,14 +12,16 @@ namespace WindowsFormsApp1
 {
 	public partial class MainForm : Form
 	{
-		public MainForm()
+		private ProjectSettings _projectSettings;
+
+		public MainForm(ProjectSettings projectSettings)
 		{
 			InitializeComponent();
 
-			ProjectSettings prjSettings;
+			_projectSettings = projectSettings;
 
 			///<summary>
-			///Создание playerControl, logControl, settingsControl
+			///Создание объектов Control
 			///</summary>
 
 			var playerControl = new PlayerControl();
